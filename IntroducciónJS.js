@@ -65,9 +65,9 @@
 // Constantes
 
     const numeroPi = 3.1416;
-    console.log(numeroPi); 
+    console.log(numeroPi);  
 
-// Operadores aritméticos
+// Operadores aritmético s
     let a, b, c, d;
     let resultado;
 
