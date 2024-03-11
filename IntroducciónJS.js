@@ -230,5 +230,158 @@
         }
     }
 
+    let poblacion = 1000;
+    let crecimientoAnual = 10;
+    let numeroAnyos = 5;
+    for(let i = 0; i < numeroAnyos; i++) {
+        poblacion += crecimientoAnual; // poblacion = poblacion + crecimientoAnual
+        console.log(poblacion);
+    }
+
+// Arrays
+
+    let animales = ['tortuga','loro','perro','gato'];
+    let mascota = animales[2];
+    console.log(mascota);
+
+    for(let i=0; i < animales.lenght; i++) {
+        console.log('La mascota en la posición ' + i + ' es: ' + animales[i]);
+    }
+
+    /* Si queremos acceder al último tendremos que restarle 1 ya que el array comienza por el 0. */
+
+    let ultimo = animales[animales.length-1];
+    console.log(ultimo);
+
+    /*Añadir elementos de un array*/
+
+    animales.unshift('pez');
+
+    /*Añadir elementos al final del array*/
+        
+    animales.push('cocodrilo');
+
+    /*Extraer el último elemento*/
+
+    animales.pop();
+
+    /*Extraer el primer elemento*/
+
+    animales.shift();
+
+    /*Eliminar un elemento en una posicion determinada con la cantidad de elementos que queremos eliminar*/
+
+    console.log('antes');
+    console.log(animales);
+    console.log('prueba');
+    animales.splice(1, 2); // el primer numero indica en la posición que queremos empezar a eliminar y el segundo la cantidad de elementos 
+    console.log(animales);
+
+    /*Aquí cambiaremos los billetes de 5 por 10*/
+
+    let billetes = [ 5, 5, 10, 20, 20, 50, 5, 10];
+
+    billetes[0] = 10; // Así cambiamos el valor, primero accediendo al elemento que queramos y igualamos
+
+    for(let i = 0; i < billetes.length; i++) {
+        if(billetes[i] == 5) {
+            billetes[i] = 10;
+        }
+    }
+
+    console.log(billetes);
+
+// Matrices
+
+    let matriz = [ [1,2,3], [4,5,6], [7,8,9] ];
+
+    let primerElemento = matriz[0][0]; // Su valor será 1
+    let segundoElemento = matriz[0][1] // Su valor será 2
+    let medio = matriz[1][1];
+
+    /*Otro ejemplo*/
+
+    let terreno = [
+        ['desierto','desierto','hierba','hierba'],
+        ['desierto','hierba','hierba','hierba'],
+        ['desierto','agua','agua','agua'],
+        ['desierto','agua','agua','hierba'],
+        ['agua','agua','hierba','hierba']
+    ];
+
+    for(let i = 0; i < terreno.length; i++) {
+        for(let j = 0; j < terreno[i].length; j++) {
+            if(terreno[i][j] == 'agua') {
+                console.log("En la posición [" + i + "][" + j + "] me puedo ahogar");
+            }
+        }
+    }
+        
+    terreno[0][0] = 'hierba'; // para modificar algún elemento
+
+// Objetos y Métodos
+
+    let jugador1 = {
+        nombre : 'Juana de Arco',
+        puntuacion : 100,
+        estaActivo : true,
+        health : 5.5
+    };
+
+    let puntuacion1 = jugador1.puntuacion;
+    let nombre1 = jugador1['nombre'];
+
+    let jugador2 = {
+            nombre : 'Capitán Ahab',
+            puntuacion : 100,
+            estaActivo : true,
+            health : 5.5,
+            traje : {
+            color: 'rojo',
+            talla: 'L',
+            esNuevo : false,
+            coste: 10
+        }
+    };
+
+    let colorTraje2 = jugador2.traje.color;
+    let costeTraje2 = jugador2['traje']['coste'];
+
+    /*Método*/
+
+    let perro = {
+        nombre: 'Artax',
+        hambriento: true,
+        energia: 1000,
+        comer : function() {
+            if(this.hambriento) {
+                this.hambriento = false;
+                this.energia = 1000;
+            }
+        },
+        jugar : function(energiaRequerida) {
+            this.energia -= energiaRequerida;
+            this.hambriento = true;
+        },
+        info : function() {
+            console.log('Nombre: ' + this.nombre);
+            console.log('Energia: ' + this.energia);
+        },
+        ladrar : function() {
+            return 'Guau guau!';
+        }
+    };
+
+    perro.jugar(400);
+    perro.info();
+    perro.comer();
+    perro.info();
+    console.log(perro.ladrar());
+            
+
+        
+
+
+    
     
         
