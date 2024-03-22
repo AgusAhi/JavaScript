@@ -32,6 +32,26 @@
         text-align: center; /* Centrado del texto */
         padding: 20px; /* Añadimos un espacio alrededor del contenido */
     }
+    /* Estilos para los botones */
+    .botones a {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .botones a:hover {
+        background-color: #0056b3;
+    }
+
+    /* Estilos para el contenedor */
+    #contenedor {
+        margin-top: 20px;
+    }
 </style>
 </head>
 <body>
@@ -40,12 +60,13 @@
    <section class="botones">
     <script src = 'Funciones.js'></script>
 <!-- botones para las acciones pedidas en los ejercicios -->
-    <a onclick="cambiarTitulo();" href="#">Cambiar el título</a> ||
-    <a onclick="cambiarColor();" href="#">Cambiar color</a>
-
-    <!-- Por hacer -->
-    <div id ="contenedor"></div>    
-    <a onclick="anyadirTexto();" href="#">Añadir contenido</a>
+    <a onclick="cambiarTitulo();" href="#">Cambiar el título</a>
+    <a onclick="cambiarColor();" href="#">Cambiar color</a>  
+    <a onclick="añadirTexto();" href="#">Añadir div</a>
+    <a onclick="eliminarDiv();" href="#">Eliminar div</a>
+    <a onclick="fuentesImg();" href="#">Mostrar fuentes</a>
+    <div onclick="ponerPie(this);"></div>
+    <div id ="contenedor"></div> 
     
    </section>
 
@@ -57,19 +78,14 @@
 
 
 <div class="fotos">
-<figure onclick="ponerPie(this)"><img src="amanecer_playa.jpeg" width="200" alt="amanecer en la playa"/>
+<figure onclick="ponerPie(this)"><img src="amanecer_playa.jpeg" width="200" alt="Amanecer en la playa"/>
  <figcaption></figcaption></figure>
-<figure onclick="ponerPie(this)"><img src="paisaje_montaña.png" width="200" alt="paisaje de montaña"/>
+<figure onclick="ponerPie(this)"><img src="paisaje_montaña.png" width="200" alt="Un paisaje de montaña"/>
  <figcaption></figcaption></figure>
 </div>
 
 
 <div id="fuentes" ></div>
-
-
-<script>
-<!-- funciones javascript pedidas en los ejercicios -->
-</script>
 
 
 </body>
