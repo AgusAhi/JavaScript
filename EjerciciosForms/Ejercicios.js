@@ -18,7 +18,7 @@ function validator() {
 
     // Ejercicio 3
 
-    opciones = document.getElementsByName("fav_language");
+    opciones = document.getElementsById("selection");
  
     var seleccionado = false;
     for (var i = 0; i < opciones.length; i++) {
